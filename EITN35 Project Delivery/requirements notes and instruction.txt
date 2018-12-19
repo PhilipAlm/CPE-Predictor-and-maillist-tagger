@@ -1,0 +1,44 @@
+**PIP requirements**
+lxml
+request
+nltk
+
+INSTRUCTIONS
+
+*To init NLTK*
+Run the script NLTK_init.py and download everything that pops up on the GUI. Choose the tab "collections" and choose the option "all". Press download.
+
+*To Create data dictionaries*
+For that you need the JSON feeds from all the years you want to store in the dictionary. 
+Visit https://nvd.nist.gov/vuln/data-feeds and download all the JSON feeds that you want the system to remember.
+Put these files into the same folder as "JSON_prodandcomp" and "JSON_compandprod". For modification please alter the code inside the scripts.
+
+Now runt both the scripts. They will produce two files. "comdict" and "prodict"
+Copy these two files and paste into BOTH the folders "CPE prediction run phase" and "Mail Lists run phase"
+
+!NOTE! that these files already exists inside both these folder. They contain information about companies and products mentioned in CVE from 2002 to 2017
+
+You are now ready to run the programs.
+
+**CPEPredictor**
+This code predicts CPE from a JSON feed.
+
+!NOTE! Inside the folder there is the JSON feed from 2018 (nvdcve-1.0-2018.json). If you want to run the program on a different year you need to put the file
+inside this directory and change "nvdcve-1.0-2018.json" to your file inside "summaryReader.py". 
+In CPEPredictor you can change the "amount" of CVE's you want to predict by changing the value amount.
+
+Run the program "CPEPredictor.py" and read the results in the terminal.
+
+**MailTagger**
+This code analzes emails from seclist.
+
+The code is currently set to run from FullDisclosure. To change this alter the code inside "MailTagger.py" at the bottom to run either OSS or FullDisclosure/BugTraq
+
+To change the date you want the program to start from change the date inside "lastFetch" The structure is "Year, Month, Page, Quater" where quater is OSS styled.
+
+Observe the terminal when running "MailTagger.py" and remeber to not run for too long or else you will get IP-banned for some time. All the data that gets produced is stored
+in "JSON.json". 
+
+!NOTE! If you want to reset JSON.json remove everything so it only contains "[]" without "". Else the program wont run.
+
+ 

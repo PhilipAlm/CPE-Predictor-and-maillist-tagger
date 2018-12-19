@@ -1,0 +1,32 @@
+Hi List,
+
+Description:
+
+A buffer overflow vulnerability in "Add command" functionality exists in Flexense’s SyncBreeze Enterprise <= 10.3.14. 
+The vulnerability can be triggered by an authenticated attacker who submits more than 5000 characters as the command 
+name. It will cause termination of the SyncBreeze Enterprise server and possibly remote command execution with SYSTEM 
+privilege.
+
+Author:
+
+@ryantzj
+
+www.ryantzj.com
+
+Homepage:
+
+http://http://www.syncbreeze.com/
+
+CVE-ID:
+
+CVE-2017-17996 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-17996
+
+CVSSv3 Score:
+
+9.9
+
+CVSSv3 Vector
+
+(/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H)
+
+Proof of Concept

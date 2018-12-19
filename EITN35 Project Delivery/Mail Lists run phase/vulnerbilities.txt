@@ -1,0 +1,10 @@
+SQL
+XSS
+OSS
+XXE
+NULL
+CSRF
+cross-site
+DOS
+DDOS
+BSOD
